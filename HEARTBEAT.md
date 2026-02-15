@@ -48,11 +48,11 @@ Revisar:
 
 ---
 
-## ⏸️ Pausado Por Enquanto
+## ✅ ATIVADO (2026-02-15 - Gustavo Confirmou)
 
-Aguardando aprovação para ativar compactação automática.
+**Configuração Aprovada:**
+- ✅ Compactação automática: 23h todo dia
+- ✅ Notificação: Telegram (5955985265)
+- ✅ Detalhamento: COMPLETO (relatório detalhado)
 
-**Para ativar, Gustavo precisa confirmar:**
-- [ ] "Compacta todo dia às 23h?"
-- [ ] "Como você quer notificação? (Telegram?)"
-- [ ] "Que detalhamento nos relatórios?"
+**Cron Job:** `heartbeat-daily-consolidation` (rodando isolado às 23h)
