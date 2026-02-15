@@ -20,7 +20,7 @@
 | 7 | Admin: Settings, Integrações, Gestão Agentes | ✅ |
 | 8 | Execução Agentes + Workers AI + Streaming | ✅ |
 | 9 | Vectorize + RAG + Cache KV inteligente | ✅ |
-| 10 | Frontend SPA (Cloudflare Pages) | 🔄 Em andamento |
+| 10 | Frontend SPA (Cloudflare Pages) — Preact + Vite | ✅ |
 
 ## Stack
 - Frontend: Cloudflare Pages (SPA, Vite)
