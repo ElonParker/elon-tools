@@ -30,9 +30,11 @@
 | Telegram | ✅ | Conectado (user 5955985265) |
 | Browser | ✅ | Headless + noSandbox |
 | **Anthropic API** | ✅ | Funcionando (Claude Haiku 4.5 padrão) |
-| **Gmail API** | ✅ | OAuth2 configurado, tokens salvos, testado |
+| **Gmail API** | ✅ | OAuth2 configurado, RFC 2047 encoding, testado |
+| **Trello API** | ✅ | Board criado, compartilhado, rastreamento ativo |
+| **Compactação** | ✅ | 23h todo dia via Telegram (Relatório detalhado) |
 
-🔗 **Mais detalhes:** Ver `memory/topics/openclaw-config.md`
+🔗 **Mais detalhes:** Ver `memory/topics/openclaw-config.md`, `gmail-integration.md`, `trello-integration.md`
 
 ---
 
