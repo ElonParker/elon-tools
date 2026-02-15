@@ -63,6 +63,18 @@
 
 ---
 
+## ☁️ Cloudflare (CDN + DNS + WAF)
+
+- **Tipo:** CDN, DNS Management, WAF
+- **Email:** elon.parker@castelodigital.net
+- **API Key:** Em `.env` (CLOUDFLARE_API_KEY)
+- **Account ID:** Em `.env` (CLOUDFLARE_ACCOUNT_ID)
+- **Status:** ✅ Autenticado (2026-02-15)
+- **Uso:** Gerenciar DNS, cache, WAF, performance
+- **Docs:** https://developers.cloudflare.com/api/
+
+---
+
 ## 🏠 Dynadot (Registrador de Domínios)
 
 - **Tipo:** Registrador de domínios
