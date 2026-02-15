@@ -14,6 +14,35 @@
 
 🔗 **Detalhes:** Ver `memory/topics/gustavo-profile.md`
 
+## 🔴 MEGA VISÃO: SISTEMA DE AGENTES AUTÔNOMOS (TRANSFORMACIONAL!)
+
+⚠️ **PROJETO GIGANTE:** Sistema de 9 agentes IA colaborativos em tempo real
+
+**Os 9 Agentes:**
+1. Financeiro (💰 análise ROI/fluxo)
+2. Analista de Mercado (📊 tendências/volume)
+3. Analista de Concorrentes (🔍 backlinks/gaps)
+4. Procurador de Domínios (🌐 disponibilidade)
+5. Procurador de Keywords (🔑 pesquisa/CPC)
+6. Procurador de Anúncios (📢 ad copies/viral)
+7. Procurador de Vídeos (🎥 hooks/trending)
+8. Comprador de Domínios (💳 automação compra)
+9. Dev Full Cloudflare (🚀 infraestrutura/deploy)
+
+**Fluxo:** Agentes conversam em tempo real → Chegam em solução colaborativamente
+
+**Dashboard:** Painel admin futurista mostrando todos trabalhando
+
+**Arquitetura:** Cloudflare Workers + Hono + D1 + KV + Next.js
+
+**Timeline:** MVP 6-8 semanas, Full 13 semanas
+
+**Status:** Planejado, aguardando aprovação
+
+**Referência:** `memory/topics/visao-sistema-agentes.md`
+
+---
+
 ## 🔴 TRELLO — ACOMPANHAMENTO REAL-TIME (CRÍTICO!)
 
 ⚠️ **OBRIGAÇÃO ABSOLUTA:**
