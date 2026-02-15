@@ -80,10 +80,34 @@
 
 ---
 
+## 🏗️ Arquitetura
+
+```
+🧠 AMORA (Sessão)
+   ↓ Carrega ao iniciar
+   ├─ SOUL.md (quem sou)
+   ├─ USER.md (quem é você)
+   ├─ MEMORY.md (este arquivo)
+   └─ TOOLS.md (ferramentas)
+   ↓ Consulta sob demanda
+   ├─ 🚀 projects.md
+   ├─ ⚖️  decisions.md
+   ├─ 💡 lessons.md
+   ├─ 👥 people.md
+   └─ ⏳ pending.md
+   ↓ Rascunho bruto (30 dias)
+   ├─ 2026-02-07.md
+   ├─ 2026-02-08.md
+   └─ 2026-02-15.md
+```
+
+🔗 **Detalh:** Ver `ARCHITECTURE.md`
+
 ## 📝 Leitura Hoje
 
 **Antes de responder a qualquer pergunta:**
 1. ✅ Já leu SOUL.md? (quem sou)
 2. ✅ Já leu USER.md? (quem é você)
-3. ✅ Já leu memory/2026-02-15.md? (o que fizemos hoje)
-4. 🔍 Precisa de topic específico? (memory/topics/*.md)
+3. ✅ Já leu MEMORY.md? (este arquivo)
+4. 🔍 memory/YYYY-MM-DD.md (o que fizemos hoje)
+5. 📚 memory/topics/*.md (contexto profundo se necessário)
