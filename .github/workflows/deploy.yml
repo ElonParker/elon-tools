@@ -15,14 +15,14 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        run: cd elon-tools && npm install
 
       - name: Build
-        run: cd apps/web && npm run build
+        run: cd elon-tools/apps/web && npm run build
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy apps/web/dist --project-name=elon-tools
+          command: pages deploy elon-tools/apps/web/dist --project-name=elon-tools
