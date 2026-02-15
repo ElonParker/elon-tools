@@ -19,7 +19,7 @@ export interface EmailProvider {
 export class ResendProvider implements EmailProvider {
   constructor(
     private apiKey: string,
-    private fromEmail: string = 'onboarding@resend.dev',
+    private fromEmail: string = 'noreply@elontools.com',
   ) {}
 
   async send(params: { to: string; subject: string; html: string; from?: string }): Promise<boolean> {

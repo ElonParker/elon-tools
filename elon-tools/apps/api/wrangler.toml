@@ -6,7 +6,7 @@ compatibility_flags = ["nodejs_compat"]
 # ── Environment Variables (non-secret) ──
 [vars]
 ENVIRONMENT = "production"
-FRONTEND_URL = "https://elon-tools.pages.dev"
+FRONTEND_URL = "https://elontools.com"
 
 # ── D1 Database ──
 [[d1_databases]]
@@ -34,7 +34,7 @@ binding = "AI"
 name = "elon-tools-api"
 [env.production.vars]
 ENVIRONMENT = "production"
-FRONTEND_URL = "https://elon-tools.pages.dev"
+FRONTEND_URL = "https://elontools.com"
 
 [[env.production.d1_databases]]
 binding = "DB"

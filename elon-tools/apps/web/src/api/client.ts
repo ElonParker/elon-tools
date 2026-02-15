@@ -4,7 +4,7 @@
 
 import type { ApiResponse } from '@elon-tools/shared';
 
-const BASE = import.meta.env.DEV ? '/api/v1' : 'https://elon-tools-api.elon-parker.workers.dev/api/v1';
+const BASE = import.meta.env.DEV ? '/api/v1' : 'https://api.elontools.com/api/v1';
 const MAX_RETRIES = 2;
 
 class ApiError extends Error {
