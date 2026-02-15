@@ -29,20 +29,10 @@
 | Gateway | ✅ | Local mode (127.0.0.1:18789) |
 | Telegram | ✅ | Conectado (user 5955985265) |
 | Browser | ✅ | Headless + noSandbox |
-| **Anthropic API** | ❌ | Chave rejeitada (invalid x-api-key) |
+| **Anthropic API** | ✅ | Funcionando (Claude Haiku 4.5 padrão) |
+| **Gmail API** | ✅ | OAuth2 configurado, tokens salvos, testado |
 
 🔗 **Mais detalhes:** Ver `memory/topics/openclaw-config.md`
-
----
-
-## 🔑 Problema Crítico
-
-**Chave Anthropic:** NÃO FUNCIONA
-- Configuração: `env.vars.ANTHROPIC_API_KEY`
-- Status: `invalid x-api-key` (3 chaves testadas)
-- **Ação:** Gustavo gera chave NOVA em https://console.anthropic.com/account/keys
-
-🔗 **Acompanhamento:** Ver `memory/topics/anthropic-api.md`
 
 ---
 

@@ -1,0 +1,46 @@
+# Gmail Integration — Status & Capacidades
+
+**Data Ativação:** 2026-02-15  
+**Status:** ✅ OPERACIONAL
+
+---
+
+## Credenciais
+
+- **Email:** elon.parker@castelodigital.net
+- **Authenticação:** OAuth2 (Google)
+- **Scopes:** `gmail.send` (envio de emails)
+- **Tokens:** Armazenados em `.env` (não versionado)
+
+---
+
+## Capacidades Atuais
+
+✅ **Enviar emails** via Gmail API
+- Endpoint: `POST /gmail/v1/users/me/messages/send`
+- Testado em: 2026-02-15 (email enviado pra glcbranco96@icloud.com)
+- Message ID primeiro teste: `19c5fbb186f9b2a4`
+
+---
+
+## Futura Expansão
+
+Se precisar:
+- **Ler inbox** (scope: `gmail.readonly`)
+- **Ler/enviar** (scope: `gmail`)
+- **Gerenciar rótulos** (scope: `gmail.labels`)
+- **Calendar** (scope: `calendar`)
+
+Basta Gustavo aprovar e refazer OAuth com escopo maior.
+
+---
+
+## Integração com OpenClaw
+
+Agora posso:
+1. Enviar lembretes por email
+2. Notificar resultados de tarefas
+3. Consolidar relatórios automáticos
+4. Responder via email (quando expandir scopes)
+
+Tudo integrado! 🚀
