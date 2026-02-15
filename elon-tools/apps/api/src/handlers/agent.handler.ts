@@ -12,6 +12,7 @@ import { AgentService } from '../services/agent.service.js';
 import { ExecutionService } from '../services/execution.service.js';
 import { Limits } from '@elon-tools/shared';
 import { rateLimit } from '../middleware/rate-limit.js';
+import { flattenInput } from '../lib/prompt.js';
 
 const agents = new Hono<{
   Bindings: Env;
@@ -57,7 +58,7 @@ agents.post(
     const agentId = c.req.param('id');
     const { project_id, input } = c.get('body') as ExecuteAgentInput;
 
-    const svc = new ExecutionService(c.env.DB, c.env.AI);
+    const svc = new ExecutionService(c.env.DB, c.env.AI, c.env.VECTORIZE, c.env.KV);
     const execution = await svc.execute(agentId, customerId, project_id, input);
 
     return success({ execution });
@@ -74,7 +75,7 @@ agents.post(
     const agentId = c.req.param('id');
     const { project_id, input } = c.get('body') as ExecuteAgentInput;
 
-    const svc = new ExecutionService(c.env.DB, c.env.AI);
+    const svc = new ExecutionService(c.env.DB, c.env.AI, c.env.VECTORIZE, c.env.KV);
     return svc.executeStream(agentId, customerId, project_id, input);
   },
 );
@@ -102,5 +103,22 @@ agents.get('/:id/executions/:execId', async (c) => {
 
   return success({ execution });
 });
+
+// POST /api/v1/agents/:id/search — RAG search within project context
+agents.post(
+  '/:id/search',
+  validateBody(ExecuteAgentSchema), // reuse: needs project_id + input
+  async (c) => {
+    const { customerId } = c.get('auth');
+    const agentId = c.req.param('id');
+    const { project_id, input } = c.get('body') as ExecuteAgentInput;
+
+    const vectorizeSvc = new (await import('../services/vectorize.service.js')).VectorizeService(c.env.VECTORIZE, c.env.DB, c.env.AI);
+    const query = flattenInput(input);
+    const results = await vectorizeSvc.search(query, customerId, project_id, { agentId });
+
+    return success({ results });
+  },
+);
 
 export { agents as agentRoutes };

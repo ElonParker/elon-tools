@@ -18,7 +18,7 @@ api.route('/admin', adminRoutes);
 api.get('/executions/:id', authMiddleware, async (c) => {
   const { customerId } = c.get('auth');
   const id = c.req.param('id');
-  const svc = new ExecutionService(c.env.DB, c.env.AI);
+  const svc = new ExecutionService(c.env.DB, c.env.AI, c.env.VECTORIZE, c.env.KV);
   const execution = await svc.getById(id, customerId);
   return success({ execution });
 });

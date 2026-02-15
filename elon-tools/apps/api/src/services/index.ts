@@ -15,6 +15,6 @@ export { IntegrationService, SUPPORTED_PROVIDERS } from './integration.service.j
 export { SettingsService } from './settings.service.js';
 export { AiService } from './ai.service.js';
 export { ExecutionService } from './execution.service.js';
-
-// Planned (next etapa):
-// - vectorize.service.ts  → Etapa 9
+export { EmbeddingService } from './embedding.service.js';
+export { VectorizeService } from './vectorize.service.js';
+export { ExecutionCacheService } from './execution-cache.service.js';

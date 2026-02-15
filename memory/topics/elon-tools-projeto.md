@@ -18,8 +18,8 @@
 | 5 | Auth completo (magic link, Turnstile, sessão, RBAC) | ✅ |
 | 6 | Projects CRUD + Auto-coleta domínio | ✅ |
 | 7 | Admin: Settings, Integrações, Gestão Agentes | ✅ |
-| 8 | Execução Agentes + Workers AI + Streaming | 🔄 Em andamento |
-| 9 | Email + Polish + Deploy | ⏳ |
+| 8 | Execução Agentes + Workers AI + Streaming | ✅ |
+| 9 | Vectorize + RAG + Cache KV inteligente | 🔄 Em andamento |
 
 ## Stack
 - Frontend: Cloudflare Pages (SPA, Vite)

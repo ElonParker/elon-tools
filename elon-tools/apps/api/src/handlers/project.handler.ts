@@ -40,6 +40,15 @@ projects.post('/', validateBody(CreateProjectSchema), async (c) => {
 
   const project = await svc.create(customerId, data);
 
+  // Auto-index project metadata in Vectorize (best-effort, async)
+  if (project.metadata && Object.keys(project.metadata).length > 0) {
+    try {
+      const { VectorizeService } = await import('../services/vectorize.service.js');
+      const vecSvc = new VectorizeService(c.env.VECTORIZE, c.env.DB, c.env.AI);
+      vecSvc.indexProjectMetadata(customerId, project.id, project.metadata).catch(() => {});
+    } catch { /* Vectorize not available */ }
+  }
+
   return success({ project }, undefined, 201);
 });
 
