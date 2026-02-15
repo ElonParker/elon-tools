@@ -1,0 +1,30 @@
+# Credenciais e Dados Sensíveis
+.env
+.env.local
+.env.*.local
+secrets/
+credentials/
+*.client_secret.json
+client_secret.json
+token.json
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+.vscode/
+.idea/
+
+# Arquivos temporários
+*.tmp
+*.swp
+.trash/
+
+# Configuração local (nunca commitar)
+openclaw.local.json
