@@ -98,6 +98,32 @@
 
 ---
 
+## 🐙 GitHub
+
+- **Username:** ElonParker
+- **Token:** Em `.env` (GITHUB_TOKEN)
+- **Status:** ✅ Autenticado (2026-02-15)
+- **Repositórios:** 2 ativos
+  - elon-parker (Dashboard, HTML)
+  - elon-parker-clean (Dashboard alternativo, HTML)
+- **Uso:** Version control, CI/CD, deploy automático
+- **Docs:** https://docs.github.com/en/rest
+
+---
+
+## ☁️ Cloudflare (CDN + DNS + WAF)
+
+- **Tipo:** CDN, DNS Management, WAF
+- **Email:** elon.parker@castelodigital.net
+- **API Key:** Em `.env` (CLOUDFLARE_API_KEY)
+- **Account ID:** Em `.env` (CLOUDFLARE_ACCOUNT_ID)
+- **Status:** ✅ Autenticado (2026-02-15)
+- **Uso:** Gerenciar DNS, cache, WAF, performance
+- **Hosting:** Cloudflare Pages (para elon-parker repos)
+- **Docs:** https://developers.cloudflare.com/api/
+
+---
+
 ## 🤖 Anthropic API
 
 - **API Key:** Em `.env` (ANTHROPIC_API_KEY)
