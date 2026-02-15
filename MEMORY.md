@@ -14,7 +14,28 @@
 
 🔗 **Detalhes:** Ver `memory/topics/gustavo-profile.md`
 
-## 🎯 Modelo Padrão - CRÍTICO!
+## 🔴 TRELLO — ACOMPANHAMENTO REAL-TIME (CRÍTICO!)
+
+⚠️ **OBRIGAÇÃO ABSOLUTA:**
+- TODA tarefa que começar → Criar card em Trello
+- ENQUANTO trabalha → Atualizar em tempo real
+- MÁXIMO detalhamento → Nunca genérico
+- Gustavo acompanha 100% para validar + otimizar
+
+**Estrutura Obrigatória de Card:**
+- Status: [Planejado | Em progresso XX% | Bloqueado | Concluído]
+- O quê, Por quê, Checklist, Próximos passos, Links
+
+**7 Templates:**
+- [SETUP], [INTEG], [DEV], [BUG], [RESEARCH], [BLOCKER], [HEARTBEAT]
+
+**Referência:** `memory/topics/trello-workflow-sistema.md`  
+**Board:** https://trello.com/b/Ws7D7tpd/elon-parker-tasks-projects  
+**Script:** `scripts/trello-card.js`
+
+---
+
+## 🎯 Modelo Padrão - IA
 
 ⚠️ **NUNCA começar com Opus 4.6**
 - Usar: Claude Haiku 4.5 (economiza tokens)
@@ -31,10 +52,13 @@
 | Browser | ✅ | Headless + noSandbox |
 | **Anthropic API** | ✅ | Funcionando (Claude Haiku 4.5 padrão) |
 | **Gmail API** | ✅ | OAuth2 configurado, RFC 2047 encoding, testado |
-| **Trello API** | ✅ | Board criado, compartilhado, rastreamento ativo |
+| **Trello API** | 🔴 **CRÍTICO** | Board operacional, sistema de rastreamento 100% funcional |
 | **Compactação** | ✅ | 23h todo dia via Telegram (Relatório detalhado) |
+| **Rastreamento Real-Time** | 🔴 **CRÍTICO** | TODA tarefa deve ter card Trello com máximo detalhe |
 
-🔗 **Mais detalhes:** Ver `memory/topics/openclaw-config.md`, `gmail-integration.md`, `trello-integration.md`
+🔗 **Mais detalhes:** Ver `memory/topics/openclaw-config.md`, `gmail-integration.md`, `trello-integration.md`, **`trello-workflow-sistema.md`** (NOVO - CRÍTICO!)
+
+**Prioridade:** Trello é tão importante quanto a tarefa em si. Sem Trello = sem validação em tempo real de Gustavo!
 
 ---
 
@@ -45,18 +69,26 @@
 3. ✅ **SEMPRE** perguntar antes de agir externamente
 4. ✅ **SEMPRE** português
 5. ✅ **SEMPRE** Haiku 4.5 por padrão
+6. 🔴 **SEMPRE Trello** — TODA tarefa = card com máximo detalhamento (CRÍTICO!)
+   - Criar antes de começar
+   - Atualizar em tempo real
+   - Mover entre listas conforme progride
+   - Nunca genérico, sempre específico
+   - Gustavo acompanha tudo em tempo real!
 
 ---
 
-## 📋 Navegação de Topics (6-File Pattern)
+## 📋 Navegação de Topics (8-File Pattern)
 
 | Topic | Arquivo | O Quê |
 |-------|---------|-------|
+| 🔴 **Trello Workflow** | `trello-workflow-sistema.md` | **CRÍTICO!** Sistema de rastreamento real-time (templates, fluxo, regras) |
 | 🚀 Projects | `projects.md` | Projetos ativos, status, bloqueios, próximos passos |
 | ⚖️ Decisions | `decisions.md` | Decisões permanentes com data, motivo, implicações |
 | 💡 Lessons | `lessons.md` | Erros cometidos, descobertas, padrões aprendidos |
 | 👥 People | `people.md` | Equipe (Gustavo, Elon), contatos, comunicação |
 | ⏳ Pending | `pending.md` | Aguardando input, bloqueios, timeline |
+| 📊 Integrações | `gmail-integration.md`, `trello-integration.md` | APIs e ferramentas configuradas |
 | 📅 YYYY-MM-DD | `memory/YYYY-MM-DD.md` | Diário raw (rascunho bruto, retenção 30 dias) |
 
 ---

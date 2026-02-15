@@ -12,8 +12,12 @@
 ├─ Telegram pareado
 ├─ API Anthropic funcionando
 ├─ Memória em 4 camadas
-└─ Base de conhecimento escalável
+├─ Base de conhecimento escalável
+└─ 🔴 TRELLO RASTREAMENTO (CRÍTICO!)
+   └─ TODA tarefa = card com máximo detalhe
 ```
+
+**⚠️ ANTES DE QUALQUER COISA:** Ler `CHECKLIST-DIARIA-ELON.md`!
 
 ---
 
@@ -121,34 +125,77 @@ Telegram ................. ✅ OK (pareado: 5955985265)
 API Anthropic ............ ✅ OK (funcionando)
 Modelo padrão ............ ✅ OK (Haiku 4.5)
 Memória .................. ✅ OK (4 camadas)
-Topic Files .............. ✅ OK (6 files)
+Topic Files .............. ✅ OK (8 files + 1 crítico!)
 Segurança ................ ✅ OK (sigiloso)
 Git Histórico ............ ✅ OK (commits preservados)
+🔴 TRELLO RASTREAMENTO .. ✅ OK (CRÍTICO! real-time validation)
+```
+
+**NOVO: Trello é agora parte integral do sistema!**
+```
+Trello Board ............. ✅ OPERACIONAL
+├─ Script automação ...... ✅ trello-card.js (testado)
+├─ 7 Templates ........... ✅ Para cada tipo de tarefa
+├─ Sistema real-time ..... ✅ Gustavo acompanha 100%
+└─ Obrigatoriedade ....... 🔴 SEM EXCEÇÃO!
 ```
 
 ---
 
-## 🔥 Compactação Automática
+## 🔴 TRELLO — Sistema de Rastreamento Real-Time (CRÍTICO!)
 
-**O quê:** Ao final de cada sessão/dia, extraio lições, decisões e atualizo memória  
-**Quando:** Todo dia às 23h (ou quando solicitado)  
-**Como:** 4 passos (modelo Gustavo)
+**Por quê:** Gustavo quer acompanhar CADA TAREFA em tempo real para validar, otimizar e dar feedback iterativo.
 
 ```
-1️⃣  Capability Evolving
-    Script analisa a sessão automaticamente
-    
-2️⃣  Extração Manual
-    Reviso conversas, decisões, lições, contatos
-    
-3️⃣  Nota Diária
-    Consolidam o raw capture do dia
-    
-4️⃣  Nunca Pular
-    ⚠️  Sem extração = perde 80% do conhecimento!
+TODA TAREFA DEVE TER:
+
+1. Card criado ANTES de começar
+2. Atualizado CONSTANTEMENTE enquanto trabalha
+3. Status sempre claro: [Planejado | Em progresso XX% | Bloqueado | Concluído]
+4. Descrição detalhada: O quê, Por quê, Checklist, Links
+5. Movido pra "Concluído" apenas quando PRONTO
+
+ESTRUTURA OBRIGATÓRIA:
+├─ Status: [Atual]
+├─ O quê: [Descrição específica]
+├─ Por quê: [Contexto/benefício]
+├─ Checklist: [Itens concretos]
+├─ Blockers: [Se houver]
+├─ Próximos passos: [O que vem depois]
+└─ Links: [Documentação, scripts, memory]
+
+SEM GENÉRICO! Tudo bem específico!
 ```
 
-**Status:** ⏸️ Pausado (aguardando aprovação Gustavo)
+**Referências:**
+- Board: https://trello.com/b/Ws7D7tpd/elon-parker-tasks-projects
+- Script: `scripts/trello-card.js`
+- Workflow: `memory/topics/trello-workflow-sistema.md`
+- Templates: `CARD-TEMPLATES.md`
+- Checklist: `CHECKLIST-DIARIA-ELON.md`
+
+**Status:** ✅ ATIVO E OPERACIONAL (não é opcional!)
+
+---
+
+## 🔥 Compactação Automática (23h)
+
+**O quê:** Ao final de cada dia, sistema consolida lições, decisões e atualiza memória  
+**Quando:** Todo dia às 23h  
+**Como:** Automático (isolado)
+
+```
+1️⃣  Conversas analisadas
+2️⃣  Lições extraídas → lessons.md
+3️⃣  Decisões documentadas → decisions.md
+4️⃣  Projetos atualizados → projects.md
+5️⃣  Blockers identificados → pending.md
+6️⃣  Diário consolidado → memory/YYYY-MM-DD.md
+7️⃣  Git commit automático
+8️⃣  Relatório detalhado → Telegram + card [HEARTBEAT] no Trello
+```
+
+**Status:** ✅ ATIVO (Gustavo aprovado 2026-02-15)
 
 ---
 
@@ -229,6 +276,9 @@ Format: [A definir]
 | "Que tá bloqueado?" | Consulto pending.md |
 | "O que fizemos hoje?" | Leio memory/2026-02-15.md |
 | "Salva isso importante" | Vou pra decisions.md + Git commit |
+| **"Quer começar [tarefa]?"** | **Crio card no Trello ANTES** |
+| **"Qual card eu tô fazendo?"** | **Consulto Trello em tempo real** |
+| **"Ver progresso?"** | **Acessa https://trello.com/b/Ws7D7tpd/** |
 
 ---
 

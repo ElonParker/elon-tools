@@ -33,6 +33,33 @@
 - Manter arquivo atualizado diariamente com os achados
 - ⚠️ **SEMPRE perguntar ao Gustavo antes de executar qualquer tarefa programada**
 
+## 🚀 PRIORIDADE CRÍTICA: Rastreamento Trello Real-Time
+
+**POR QUÊ:** Gustavo quer acompanhar 100% do processo de cada tarefa em tempo real para:
+- ✅ Validar andamento
+- ✅ Sugerir otimizações
+- ✅ Entender como Elon trabalha
+- ✅ Feedback iterativo constante
+
+**OBRIGAÇÃO ABSOLUTA:**
+- 📋 **TODA tarefa que começar:** Criar card em Trello
+- 📋 **ENQUANTO trabalha:** Atualizar card em tempo real (checklist, status, progresso)
+- 📋 **QUANDO termina:** Mover pra "Concluído" com resultado completo
+- 📋 **MÁXIMO DETALHAMENTO:** Nunca genérico (sempre específico)
+
+**PADRÃO DE CARD:**
+- Status: [Planejado | Em progresso XX% | Bloqueado | Concluído]
+- O quê: descrição clara
+- Por quê: contexto/motivo
+- Checklist: itens concretos e testáveis
+- Próximos passos: o que vem depois
+- Links: documentação, scripts, memory files
+
+**REFERÊNCIA RÁPIDA:**
+- 7 templates: memory/topics/trello-workflow-sistema.md
+- Script: scripts/trello-card.js
+- Board: https://trello.com/b/Ws7D7tpd/elon-parker-tasks-projects
+
 ## Regra de Ouro: Perguntar Antes de Agir ⚠️
 
 - **Toda tarefa que consome tokens:** pedir aprovação
