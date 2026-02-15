@@ -75,11 +75,14 @@
 
 ## 📋 Trello
 
-- **Email Gustavo:** glcbranco96@icloud.com
-- **Board:** A criar
+- **Email Elon:** elon.parker@castelodigital.net
+- **Username:** elonparker2
 - **API Key:** Em `.env` (TRELLO_API_KEY)
-- **Status:** ⏳ Setup pendente
-- **Uso:** Registrar tarefas, organização de projetos
+- **Token:** Em `.env` (TRELLO_TOKEN)
+- **Status:** ✅ Operacional
+- **Board:** Elon Parker - Tasks & Projects (https://trello.com/b/Ws7D7tpd/elon-parker-tasks-projects)
+- **Compartilhado com:** glcbranco96 (Gustavo Castelo Branco)
+- **Uso:** Registrar tarefas, organização de projetos, consolidação diária automática
 
 ---
 
@@ -132,12 +135,13 @@ const googleSecret = process.env.GOOGLE_CLIENT_SECRET;
 
 - [x] Email workspace criado
 - [x] Google OAuth (client_secret.json) guardado
-- [ ] Testar integração Gmail
+- [x] Testar integração Gmail (RFC 2047 encoding implementado)
+- [x] Trello board criado e compartilhado (2026-02-15)
 - [ ] Integrar SimilarWeb (quando API key chegar)
 - [ ] Integrar Majestic (quando API key chegar)
 - [ ] Integrar SEMrush (quando API key chegar)
 - [ ] Dynadot setup (quando API key chegar)
-- [ ] Trello board criado (quando Gustavo aprovado)
+- [ ] Scripts Trello (create-card, move-card, sync)
 
 ---
 
