@@ -6,8 +6,8 @@ export interface Env {
   // KV
   KV: KVNamespace;
 
-  // Vectorize
-  VECTORIZE: VectorizeIndex;
+  // Vectorize (optional — requires Vectorize permission)
+  VECTORIZE?: VectorizeIndex;
 
   // Workers AI
   AI: Ai;

@@ -5,25 +5,25 @@ compatibility_flags = ["nodejs_compat"]
 
 # ── Environment Variables (non-secret) ──
 [vars]
-ENVIRONMENT = "dev"
-FRONTEND_URL = "http://localhost:5173"
+ENVIRONMENT = "production"
+FRONTEND_URL = "https://elon-tools.pages.dev"
 
 # ── D1 Database ──
 [[d1_databases]]
 binding = "DB"
 database_name = "elon-tools-db"
-database_id = "PLACEHOLDER_D1_ID"  # Replace after `wrangler d1 create`
+database_id = "45783f4e-c689-4acb-92c9-3eff4408180e"
 migrations_dir = "migrations"
 
 # ── KV Namespace ──
 [[kv_namespaces]]
 binding = "KV"
-id = "PLACEHOLDER_KV_ID"  # Replace after `wrangler kv namespace create`
+id = "b1fe7c29518c4cf3a77c9625fb736a97"
 
-# ── Vectorize Index ──
-[[vectorize]]
-binding = "VECTORIZE"
-index_name = "elon-tools-vectors"
+# ── Vectorize Index (requires Vectorize permission — enable later) ──
+# [[vectorize]]
+# binding = "VECTORIZE"
+# index_name = "elon-tools-vectors"
 
 # ── Workers AI ──
 [ai]
@@ -39,16 +39,16 @@ FRONTEND_URL = "https://elon-tools.pages.dev"
 [[env.production.d1_databases]]
 binding = "DB"
 database_name = "elon-tools-db"
-database_id = "PLACEHOLDER_D1_ID_PROD"
+database_id = "45783f4e-c689-4acb-92c9-3eff4408180e"
 migrations_dir = "migrations"
 
 [[env.production.kv_namespaces]]
 binding = "KV"
-id = "PLACEHOLDER_KV_ID_PROD"
+id = "b1fe7c29518c4cf3a77c9625fb736a97"
 
-[[env.production.vectorize]]
-binding = "VECTORIZE"
-index_name = "elon-tools-vectors"
+# [[env.production.vectorize]]
+# binding = "VECTORIZE"
+# index_name = "elon-tools-vectors"
 
 [env.production.ai]
 binding = "AI"
