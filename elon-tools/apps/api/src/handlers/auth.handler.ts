@@ -39,7 +39,7 @@ auth.post(
     const html = buildMagicLinkEmail(callbackUrl);
     const sent = await emailProvider.send({
       to: email,
-      subject: '🔐 ElonTools — Seu link de acesso',
+      subject: '⚡ Seu acesso ao ElonTools',
       html,
     });
 

@@ -19,7 +19,7 @@ export interface EmailProvider {
 export class ResendProvider implements EmailProvider {
   constructor(
     private apiKey: string,
-    private fromEmail: string = 'noreply@elontools.com',
+    private fromEmail: string = 'ElonTools <noreply@elontools.com>',
   ) {}
 
   async send(params: { to: string; subject: string; html: string; from?: string }): Promise<boolean> {
@@ -76,12 +76,23 @@ export function buildMagicLinkEmail(url: string): string {
   return `
 <!DOCTYPE html>
 <html>
-<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 40px; background: #f5f5f5;">
-  <div style="max-width: 480px; margin: 0 auto; background: white; border-radius: 12px; padding: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-    <h2 style="margin: 0 0 16px; color: #111;">🔐 ElonTools — Login</h2>
-    <p style="color: #555; line-height: 1.6;">Clique no botão abaixo para acessar sua conta. Este link expira em <strong>15 minutos</strong>.</p>
-    <a href="${url}" style="display: inline-block; margin: 24px 0; padding: 14px 32px; background: #2563eb; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">Entrar no ElonTools</a>
-    <p style="color: #999; font-size: 13px;">Se você não solicitou este login, ignore este email.</p>
+<body style="margin: 0; padding: 0; background: #0f172a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+  <div style="max-width: 500px; margin: 40px auto; padding: 0 20px;">
+    <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 1px solid #334155; border-radius: 16px; padding: 40px; text-align: center;">
+      <div style="font-size: 40px; margin-bottom: 8px;">⚡</div>
+      <h1 style="color: #f8fafc; font-size: 24px; font-weight: 800; margin: 0 0 8px;">ElonTools</h1>
+      <p style="color: #94a3b8; font-size: 15px; margin: 0 0 32px;">Seu link de acesso chegou</p>
+      
+      <a href="${url}" style="display: inline-block; padding: 16px 48px; background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: #ffffff; text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 16px; letter-spacing: 0.3px;">Acessar minha conta</a>
+      
+      <p style="color: #64748b; font-size: 13px; margin: 32px 0 0; line-height: 1.6;">
+        Este link expira em <strong style="color: #94a3b8;">15 minutos</strong>.<br>
+        Se você não solicitou, ignore este email.
+      </p>
+    </div>
+    <p style="text-align: center; color: #475569; font-size: 12px; margin-top: 16px;">
+      © ${new Date().getFullYear()} ElonTools — elontools.com
+    </p>
   </div>
 </body>
 </html>`.trim();
