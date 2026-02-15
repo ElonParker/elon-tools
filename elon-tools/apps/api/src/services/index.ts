@@ -13,8 +13,8 @@ export { collectDomainMetadata, validateDomain, type DomainMetadata } from './do
 export { AgentService } from './agent.service.js';
 export { IntegrationService, SUPPORTED_PROVIDERS } from './integration.service.js';
 export { SettingsService } from './settings.service.js';
+export { AiService } from './ai.service.js';
+export { ExecutionService } from './execution.service.js';
 
-// Planned (next etapas):
-// - execution.service.ts  → Etapa 8
-// - ai.service.ts         → Etapa 8
+// Planned (next etapa):
 // - vectorize.service.ts  → Etapa 9

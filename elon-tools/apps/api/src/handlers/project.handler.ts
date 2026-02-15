@@ -11,6 +11,7 @@ import {
 import { authMiddleware, validateBody, validateQuery } from '../middleware/index.js';
 import { success } from '../lib/response.js';
 import { ProjectService } from '../services/project.service.js';
+import { ExecutionService } from '../services/execution.service.js';
 
 const projects = new Hono<{
   Bindings: Env;
@@ -85,6 +86,18 @@ projects.post('/:id/metadata/refresh', async (c) => {
   const project = await svc.refreshMetadata(id, customerId);
 
   return success({ project });
+});
+
+// GET /api/v1/projects/:id/executions — execution history for this project
+projects.get('/:id/executions', validateQuery(PaginationQuerySchema), async (c) => {
+  const { customerId } = c.get('auth');
+  const projectId = c.req.param('id');
+  const { page, limit } = c.get('query') as PaginationQuery;
+
+  const execSvc = new ExecutionService(c.env.DB, c.env.AI);
+  const { executions, total } = await execSvc.listByProject(customerId, projectId, page, limit);
+
+  return success({ executions }, { page, limit, total });
 });
 
 export { projects as projectRoutes };
