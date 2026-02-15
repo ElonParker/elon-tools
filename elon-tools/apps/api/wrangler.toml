@@ -1,0 +1,59 @@
+name = "elon-tools-api"
+main = "src/index.ts"
+compatibility_date = "2024-06-15"
+compatibility_flags = ["nodejs_compat"]
+
+# ── Environment Variables (non-secret) ──
+[vars]
+ENVIRONMENT = "dev"
+FRONTEND_URL = "http://localhost:5173"
+
+# ── D1 Database ──
+[[d1_databases]]
+binding = "DB"
+database_name = "elon-tools-db"
+database_id = "PLACEHOLDER_D1_ID"  # Replace after `wrangler d1 create`
+migrations_dir = "migrations"
+
+# ── KV Namespace ──
+[[kv_namespaces]]
+binding = "KV"
+id = "PLACEHOLDER_KV_ID"  # Replace after `wrangler kv namespace create`
+
+# ── Vectorize Index ──
+[[vectorize]]
+binding = "VECTORIZE"
+index_name = "elon-tools-vectors"
+
+# ── Workers AI ──
+[ai]
+binding = "AI"
+
+# ── Production Environment ──
+[env.production]
+name = "elon-tools-api"
+[env.production.vars]
+ENVIRONMENT = "production"
+FRONTEND_URL = "https://elon-tools.pages.dev"
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "elon-tools-db"
+database_id = "PLACEHOLDER_D1_ID_PROD"
+migrations_dir = "migrations"
+
+[[env.production.kv_namespaces]]
+binding = "KV"
+id = "PLACEHOLDER_KV_ID_PROD"
+
+[[env.production.vectorize]]
+binding = "VECTORIZE"
+index_name = "elon-tools-vectors"
+
+[env.production.ai]
+binding = "AI"
+
+# ── Secrets (set via `wrangler secret put`) ──
+# TURNSTILE_SECRET_KEY
+# MASTER_ENCRYPTION_KEY
+# EMAIL_API_KEY

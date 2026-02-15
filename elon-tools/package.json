@@ -1,0 +1,17 @@
+{
+  "name": "elon-tools",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev --workspace=@elon-tools/api",
+    "dev:web": "npm run dev --workspace=@elon-tools/web",
+    "build": "npm run build --workspaces",
+    "typecheck": "npm run typecheck --workspaces"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
