@@ -10,9 +10,11 @@ export {
 } from './email.service.js';
 export { ProjectService } from './project.service.js';
 export { collectDomainMetadata, validateDomain, type DomainMetadata } from './domain-collector.service.js';
+export { AgentService } from './agent.service.js';
+export { IntegrationService, SUPPORTED_PROVIDERS } from './integration.service.js';
+export { SettingsService } from './settings.service.js';
 
 // Planned (next etapas):
-// - agent.service.ts      → Etapa 7
-// - execution.service.ts  → Etapa 7
-// - ai.service.ts         → Etapa 7
-// - vectorize.service.ts  → Etapa 8
+// - execution.service.ts  → Etapa 8
+// - ai.service.ts         → Etapa 8
+// - vectorize.service.ts  → Etapa 9

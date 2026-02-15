@@ -16,8 +16,8 @@
 | 3 | D1 SQL Migrations (11 tabelas, 20+ índices, seed categorias, queries críticas) | ✅ |
 | 4 | Worker API Skeleton (Hono, 6 middlewares, 5 handler groups, stubs) | ✅ |
 | 5 | Auth completo (magic link, Turnstile, sessão, RBAC) | ✅ |
-| 6 | Projects CRUD + Auto-coleta domínio | 🔄 Em andamento |
-| 7 | Workers AI (LLM execution) | ⏳ |
+| 6 | Projects CRUD + Auto-coleta domínio | ✅ |
+| 7 | Admin: Settings, Integrações, Gestão Agentes | 🔄 Em andamento |
 | 8 | Vectorize + RAG + Frontend SPA | ⏳ |
 | 9 | Email + Polish + Deploy | ⏳ |
 
