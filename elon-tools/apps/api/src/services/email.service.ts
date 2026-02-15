@@ -12,25 +12,31 @@ export interface EmailProvider {
 }
 
 /**
- * MailChannels — free transactional email via Cloudflare Workers.
- * No API key needed when sending from a Worker (uses DNS SPF).
- * Docs: https://blog.cloudflare.com/sending-email-from-workers-with-mailchannels
+ * Resend — modern transactional email API.
+ * Free tier: 100 emails/day, 3000/month.
+ * Docs: https://resend.com/docs
  */
-export class MailChannelsProvider implements EmailProvider {
-  constructor(private fromEmail: string = 'noreply@elontools.com') {}
+export class ResendProvider implements EmailProvider {
+  constructor(
+    private apiKey: string,
+    private fromEmail: string = 'onboarding@resend.dev',
+  ) {}
 
   async send(params: { to: string; subject: string; html: string; from?: string }): Promise<boolean> {
-    const res = await fetch('https://api.mailchannels.net/tx/v1/send', {
+    const res = await fetch('https://api.resend.com/emails', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${this.apiKey}`,
+      },
       body: JSON.stringify({
-        personalizations: [{ to: [{ email: params.to }] }],
-        from: { email: params.from ?? this.fromEmail, name: 'ElonTools' },
+        from: params.from ?? this.fromEmail,
+        to: params.to,
         subject: params.subject,
-        content: [{ type: 'text/html', value: params.html }],
+        html: params.html,
       }),
     });
-    return res.status === 202 || res.status === 200;
+    return res.ok;
   }
 }
 

@@ -7,7 +7,7 @@ import { badRequest } from '../lib/errors.js';
 import { logger } from '../lib/logger.js';
 import { AuthService } from '../services/auth.service.js';
 import { verifyTurnstile } from '../services/turnstile.service.js';
-import { MailChannelsProvider, buildMagicLinkEmail } from '../services/email.service.js';
+import { ResendProvider, buildMagicLinkEmail } from '../services/email.service.js';
 
 const auth = new Hono<{ Bindings: Env; Variables: { auth: AuthContext; body: unknown; query: unknown } }>();
 
@@ -35,7 +35,7 @@ auth.post(
     const callbackUrl = `${c.env.FRONTEND_URL}/auth/callback?token=${encodeURIComponent(token)}`;
 
     // 4. Send email
-    const emailProvider = new MailChannelsProvider();
+    const emailProvider = new ResendProvider(c.env.EMAIL_API_KEY);
     const html = buildMagicLinkEmail(callbackUrl);
     const sent = await emailProvider.send({
       to: email,
