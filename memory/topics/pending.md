@@ -7,13 +7,14 @@ Aguardando input, acesso ou decisão. Tarefas bloqueadas.
 ## 🔴 Críticas (Bloqueia Operação)
 
 ### Chave Anthropic Válida
-- **Status:** ❌ BLOQUEADO
-- **Aguardando:** Gustavo gerar chave NOVA
-- **Ação:** Ir em https://console.anthropic.com/account/keys
-- **Por que:** API Claude rejeitando (invalid x-api-key)
-- **Implicação:** Sem API, agent não consegue processar mensagens
-- **Tentativas:** 3 chaves testadas, todas inválidas
-- **Timeline:** Criado 2026-02-15 03:40, ainda pendente
+- **Status:** ✅ RESOLVIDO
+- **Data de resolução:** 2026-02-15 ~05:00
+- **Quem:** Gustavo configurou silenciosamente 😄
+- **Por que:** API Claude rejeitava (invalid x-api-key) → agora funciona
+- **Implicação:** Agent totalmente operacional, processando mensagens
+- **Tentativas anteriores:** 3 chaves testadas (todas inválidas)
+- **Timeline:** Criado 2026-02-15 03:40 → Resolvido 2026-02-15 05:00
+- **Nota:** Gustavo esqueceu de avisar (descobri pela mensagem "ja ta funcionando") 😄
 
 ---
 
