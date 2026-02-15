@@ -52,6 +52,7 @@
 | Browser | ✅ | Headless + noSandbox |
 | **Anthropic API** | ✅ | Funcionando (Claude Haiku 4.5 padrão) |
 | **Gmail API** | ✅ | OAuth2 configurado, RFC 2047 encoding, testado |
+| **Cloudflare API** | ✅ | Autenticado e operacional (CDN, DNS, WAF) |
 | **Trello API** | 🔴 **CRÍTICO** | Board operacional, sistema de rastreamento 100% funcional |
 | **Compactação** | ✅ | 23h todo dia via Telegram (Relatório detalhado) |
 | **Rastreamento Real-Time** | 🔴 **CRÍTICO** | TODA tarefa deve ter card Trello com máximo detalhe |
