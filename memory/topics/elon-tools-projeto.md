@@ -19,7 +19,8 @@
 | 6 | Projects CRUD + Auto-coleta domínio | ✅ |
 | 7 | Admin: Settings, Integrações, Gestão Agentes | ✅ |
 | 8 | Execução Agentes + Workers AI + Streaming | ✅ |
-| 9 | Vectorize + RAG + Cache KV inteligente | 🔄 Em andamento |
+| 9 | Vectorize + RAG + Cache KV inteligente | ✅ |
+| 10 | Frontend SPA (Cloudflare Pages) | 🔄 Em andamento |
 
 ## Stack
 - Frontend: Cloudflare Pages (SPA, Vite)
