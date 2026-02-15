@@ -1,21 +1,22 @@
 import { createMiddleware } from 'hono/factory';
 import type { Env, AuthContext } from '../bindings.js';
 import { unauthorized } from '../lib/errors.js';
-import { logger } from '../lib/logger.js';
+import { AuthService } from '../services/auth.service.js';
 
 /**
  * Auth middleware: validates session cookie, injects AuthContext.
  * 
- * STUB: In etapa 5, this will read the cookie, hash the token,
- * look up in KV (then D1 fallback), and validate expiry.
- * For now, it checks for a header and returns 401 if missing.
+ * Flow:
+ * 1. Extract session token from cookie
+ * 2. Hash token → KV lookup (fast) → D1 fallback
+ * 3. Validate expiry + customer status
+ * 4. Inject { customerId, role } into context
  */
 export const authMiddleware = createMiddleware<{
   Bindings: Env;
   Variables: { auth: AuthContext; requestId: string };
 }>(async (c, next) => {
-  // ── STUB: will be replaced in Etapa 5 ──
-  // For local dev/testing, accept X-Debug-Auth header: "customer_id:role"
+  // Dev mode: accept X-Debug-Auth header "customer_id:role"
   const debugAuth = c.req.header('X-Debug-Auth');
   if (debugAuth && c.env.ENVIRONMENT === 'dev') {
     const [customerId, role] = debugAuth.split(':');
@@ -26,17 +27,26 @@ export const authMiddleware = createMiddleware<{
     }
   }
 
-  // Real auth: read session cookie
-  const cookie = c.req.header('Cookie');
-  const sessionToken = extractCookie(cookie, 'session');
-
+  // Extract session token from cookie
+  const sessionToken = extractCookie(c.req.header('Cookie'), 'session');
   if (!sessionToken) {
     throw unauthorized('AUTH_MISSING_SESSION', 'Sessão não encontrada');
   }
 
-  // TODO (Etapa 5): hash token → KV lookup → D1 fallback → validate
-  // For now: reject everything (no sessions exist yet)
-  throw unauthorized('AUTH_MISSING_SESSION', 'Sessão não encontrada');
+  // Validate via AuthService (KV → D1 fallback)
+  const authService = new AuthService(c.env.DB, c.env.KV);
+  const session = await authService.validateSession(sessionToken);
+
+  if (!session) {
+    throw unauthorized('AUTH_EXPIRED_SESSION', 'Sessão expirada ou inválida');
+  }
+
+  c.set('auth', {
+    customerId: session.customer_id,
+    role: session.role,
+  });
+
+  await next();
 });
 
 function extractCookie(header: string | undefined, name: string): string | undefined {
