@@ -56,14 +56,16 @@
 
 ---
 
-## 📋 Navegação de Topics
+## 📋 Navegação de Topics (6-File Pattern)
 
-| Topic | Localização | Objetivo |
-|-------|------------|----------|
-| Gustavo | `memory/topics/gustavo-profile.md` | Perfil, preferências, ferramentas |
-| OpenClaw | `memory/topics/openclaw-config.md` | Gateway, canais, plugins, comandos |
-| Anthropic | `memory/topics/anthropic-api.md` | Problema de chave, timeline, solução |
-| Decisões | `memory/topics/decisoes-importantes.md` | Histórico de decisões confirmadas |
+| Topic | Arquivo | O Quê |
+|-------|---------|-------|
+| 🚀 Projects | `projects.md` | Projetos ativos, status, bloqueios, próximos passos |
+| ⚖️ Decisions | `decisions.md` | Decisões permanentes com data, motivo, implicações |
+| 💡 Lessons | `lessons.md` | Erros cometidos, descobertas, padrões aprendidos |
+| 👥 People | `people.md` | Equipe (Gustavo, Elon), contatos, comunicação |
+| ⏳ Pending | `pending.md` | Aguardando input, bloqueios, timeline |
+| 📅 YYYY-MM-DD | `memory/YYYY-MM-DD.md` | Diário raw (rascunho bruto, retenção 30 dias) |
 
 ---
 
