@@ -82,7 +82,7 @@
 | **Anthropic API** | ✅ | Funcionando (Claude Haiku 4.5 padrão) |
 | **Gmail API** | ✅ | OAuth2 configurado, RFC 2047 encoding, testado |
 | **GitHub API** | ✅ | 2 repositórios descobertos, explorando |
-| **Cloudflare API** | ✅ | Autenticado e operacional (CDN, DNS, WAF) |
+| **Cloudflare API** | ✅ | Autenticado + operacional (CDN, DNS, WAF, Pages, Workers) |
 | **Trello API** | 🔴 **CRÍTICO** | Board operacional, sistema de rastreamento 100% funcional |
 | **Compactação** | ✅ | 23h todo dia via Telegram (Relatório detalhado) |
 | **Rastreamento Real-Time** | 🔴 **CRÍTICO** | TODA tarefa deve ter card Trello com máximo detalhe |

@@ -21,7 +21,7 @@ class ApiError extends Error {
 
 async function request<T>(
   path: string,
-  options: RequestInit = {},
+  options: RequestInit & { _noRedirect?: boolean } = {},
   retries = 0,
 ): Promise<T> {
   const res = await fetch(`${BASE}${path}`, {
@@ -40,9 +40,11 @@ async function request<T>(
     return request<T>(path, options, retries + 1);
   }
 
-  // 401: redirect to login
+  // 401: redirect unless caller opts out
   if (res.status === 401) {
-    window.location.href = '/login';
+    if (!options._noRedirect && !window.location.pathname.startsWith('/login')) {
+      window.location.href = '/login';
+    }
     throw new ApiError('AUTH_MISSING_SESSION', 'Sessão expirada', 401);
   }
 
@@ -63,6 +65,8 @@ async function request<T>(
 // Convenience methods
 export const api = {
   get: <T>(path: string) => request<T>(path),
+  /** GET without 401 redirect (for auth checks) */
+  getQuiet: <T>(path: string) => request<T>(path, { _noRedirect: true } as any),
   post: <T>(path: string, body?: unknown) =>
     request<T>(path, { method: 'POST', body: body ? JSON.stringify(body) : undefined }),
   patch: <T>(path: string, body: unknown) =>

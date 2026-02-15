@@ -16,7 +16,7 @@ export const isLoggedIn = computed(() => user.value !== null);
 export async function fetchMe(): Promise<void> {
   authLoading.value = true;
   try {
-    const data = await api.get<{ user: User }>('/auth/me');
+    const data = await api.getQuiet<{ user: User }>('/auth/me');
     user.value = data.user;
   } catch {
     user.value = null;
