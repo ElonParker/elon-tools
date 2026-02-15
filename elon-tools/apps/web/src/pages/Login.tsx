@@ -72,7 +72,7 @@ export function LoginPage() {
           </div>
 
           <div class="form-group">
-            <div class="cf-turnstile" data-sitekey="0x0000000000000000000000" data-theme="dark" />
+            <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="dark" />
           </div>
 
           <button class="btn btn-primary" style={{ width: '100%' }} type="submit" disabled={loading.value}>

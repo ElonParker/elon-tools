@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "dotenv": "^17.3.1",
-    "minimist": "^1.2.8"
+    "libsodium-wrappers": "^0.8.2",
+    "minimist": "^1.2.8",
+    "tweetnacl": "^1.0.3"
   }
 }
