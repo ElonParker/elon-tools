@@ -128,10 +128,39 @@ Git Histórico ............ ✅ OK (commits preservados)
 
 ---
 
+## 🔥 Compactação Automática
+
+**O quê:** Ao final de cada sessão/dia, extraio lições, decisões e atualizo memória  
+**Quando:** Todo dia às 23h (ou quando solicitado)  
+**Como:** 4 passos (modelo Gustavo)
+
+```
+1️⃣  Capability Evolving
+    Script analisa a sessão automaticamente
+    
+2️⃣  Extração Manual
+    Reviso conversas, decisões, lições, contatos
+    
+3️⃣  Nota Diária
+    Consolidam o raw capture do dia
+    
+4️⃣  Nunca Pular
+    ⚠️  Sem extração = perde 80% do conhecimento!
+```
+
+**Status:** ⏸️ Pausado (aguardando aprovação Gustavo)
+
+---
+
 ## 🎯 Próximos Passos
 
-### Espera De Você
+### Espera Aprovação Gustavo
 ```
+[ ] Ativar compactação automática? (sim/não)
+    [ ] Que hora? (23h? outra?)
+    [ ] Notificação? (Telegram?)
+    [ ] Detalhamento? (resumido ou completo?)
+
 [ ] Configurar Trello (email: glcbranco96@icloud.com)
 [ ] Fornecer credenciais SEO (SimilarWeb, Majestic, SEMrush)
 [ ] Decidir: Monitoramento SERP automático? (frequência?)
